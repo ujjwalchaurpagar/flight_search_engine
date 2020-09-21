@@ -1,0 +1,44 @@
+body{
+  background-color: #f9f9f9;
+}
+.MuiDrawer-paper{
+  top: 66px!important;
+}
+.MuiOutlinedInput-input {
+  padding: 16px 14px!important;
+}
+.makeStyles-textField-13{
+  margin: 8px 10px;
+}
+.tab_container{
+  border: 1px solid;
+  margin: 10px;
+  padding: 10px 15px;
+  border-top-left-radius: 10px;
+  margin-bottom: 0px;
+  border-bottom: 0px;
+  width: 40%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.filter_container{
+  border: 1px solid;
+  margin: 10px;
+  padding: 10px 15px;
+  margin-top: 0px;
+}
+.MuiOutlinedInput-root{
+  max-width: 230px;
+}
+.makeStyles-textField-14{
+  width: 90%!important;
+}
+.MuiCardContent-root:last-child{
+  padding-bottom: 16px!important;
+}
+
+/* slider */
+.MuiSlider-markLabel{
+  top:40px;
+}
