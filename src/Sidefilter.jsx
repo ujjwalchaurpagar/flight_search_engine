@@ -66,14 +66,17 @@ const Sidefilter = () => {
     }));
 
     //   filter js
-    const filterSearch = (e) => {
+    const filterSearch = async (e) => {
         e.preventDefault();
-        setResult(Flight.filter( flight => flight.source === origin && flight.destination === Destination));
-        setShowResults(true);
-        Result.map((result) => (
-            Marks.push(result.fare)
-        ));
-        sliderRange();
+        try{
+            setShowResults(true);
+            Result.map((result) => (
+                Marks.push(result.fare)
+            ));
+            sliderRange();
+        }catch(error){
+            console.error(error);
+        }
     }
     const buy = (result) =>{
         alert(`You Booked ${result.flight_id} for ${result.source} to ${result.destination} journey successfully.`);
@@ -146,6 +149,7 @@ const Sidefilter = () => {
 
     const handleDestination = (e) => {
         setDestination(e.target.value);
+        setResult(Flight.filter( flight => flight.source === origin && flight.destination === e.target.value));
         Marks.length = 0;
     }
     const classes = useStyles();
